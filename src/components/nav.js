@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import SendMessages from "./sendMessage";
+import "./nav.css";
 
 const Nav = () => {
   return (
@@ -8,7 +9,7 @@ const Nav = () => {
       class="navbar navbar-expand-lg navbar-dark"
       style={{ backgroundColor: "#333" }}
     >
-      <div class="container-fluid">
+      <div class="container-fluid ms-2">
         <a class="navbar-brand" href="/">
           Aço Ivaiporã
         </a>
@@ -39,18 +40,8 @@ const Nav = () => {
                 Onde Estamos
               </a>
             </li>
-            {/* <li class="nav-item">
-              <a
-                class="nav-link disabled"
-                href="#"
-                tabindex="-1"
-                aria-disabled="true"
-              >
-                Disabled
-              </a>
-            </li> */}
-          </ul>
-          <ul class="navbar-nav">
+            {/* </ul>
+          <ul class="nav-item"> */}
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
@@ -79,17 +70,18 @@ const Nav = () => {
               </ul>
             </li>
           </ul>
-          {/* <form class="d-flex">
+          <form class="d-flex me-2">
             <input
               class="form-control me-2"
+              size="50"
               type="search"
-              placeholder="Search"
+              placeholder="Buscar Produto"
               aria-label="Search"
             />
             <button class="btn btn-outline-success" type="submit">
-              Search
+              Buscar
             </button>
-          </form> */}
+          </form>
         </div>
       </div>
     </nav>
