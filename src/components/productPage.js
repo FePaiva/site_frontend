@@ -64,24 +64,20 @@ const ProductPage = ({ products }) => {
             <h5 className="card-title">{product.name}</h5>
             <p className="card-text">{product.description}</p>
             <h5 className="card-title">Tipos</h5>
-            <p className="card-text">{product.tipo}</p>
+            <p className="card-text" style={{ whiteSpace: "pre-line" }}>
+              {product.tipo}
+            </p>
           </div>
         </div>
       </div>
-      <div class="card-body">
-        <a href="/" class="card-link">
+      <div className="card-body">
+        <a href="/" className="card-link">
           Voltar
         </a>
-        <a href="/" class="card-link">
+        <a href="/" className="card-link">
           Lista completa
         </a>
       </div>
-      {/* <Link to="/">
-        <button className="btn btn-primary">Voltar</button>
-      </Link>
-      <Link to="/">
-        <button className="btn btn-primary">Lista completa</button>
-      </Link> */}
     </div>
   );
 };

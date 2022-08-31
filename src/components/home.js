@@ -1,5 +1,6 @@
 import React from "react";
 import Feed from "./feed";
+import "./home.css";
 
 const Home = ({ products }) => {
   return (
@@ -7,7 +8,7 @@ const Home = ({ products }) => {
       {products.length ? (
         <Feed products={products} />
       ) : (
-        <p styke={{ marginTop: "2rem" }}>No products to display.</p>
+        <p style={{ marginTop: "2rem" }}>No products to display.</p>
       )}
     </main>
   );

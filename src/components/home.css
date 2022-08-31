@@ -1,0 +1,16 @@
+.Home {
+  width: 100%;
+  flex-grow: 1;
+  padding: 3rem;
+  overflow-y: auto;
+  background-color: #fff;
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(min(100%/4, max(64px, 100%/4)), 1fr)); */
+}
+
+@media (min-width: 600px) {
+  .Home { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 900px) {
+  .Home { grid-template-columns: repeat(4, 1fr); }
+}
