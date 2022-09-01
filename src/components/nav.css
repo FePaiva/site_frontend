@@ -1,10 +1,13 @@
-nav {
-  margin-top: 110px;
+.navbar {
   position: fixed;
+  background-color: #333;
+  width: 100%;
+  margin-top: 110px;
+  z-index: 1100;
 }
 
 @media (max-width: 480px) {
-  nav {
+  .navbar {
     margin-top: 60px;
   }
 }

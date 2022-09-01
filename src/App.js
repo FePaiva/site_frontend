@@ -9,6 +9,7 @@ import OndeEstamos from "./components/ondeEstamos";
 import Missing from "./components/missing";
 import Footer from "./components/footer";
 import productsApi from "./api/productsApi";
+import Login from "./components/login";
 
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -21,6 +22,7 @@ function getAPIData() {
 }
 function App() {
   const [products, setProducts] = useState([]);
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
     let mounted = true;
@@ -31,21 +33,34 @@ function App() {
     });
     return () => (mounted = false);
   }, []);
+
+  useEffect(() => {
+    // auto-login
+    fetch("/me").then((r) => {
+      if (r.ok) {
+        r.json().then((user) => setUser(user));
+      }
+    });
+  }, []);
+
   return (
     <div className="App">
       <Header />
-      <Nav />
-      <Routes>
-        <Route path="/" element={<Home products={products} />} />
-        <Route path="/sobre" element={<Sobre />} />
-        <Route
-          path="/product/:id"
-          element={<ProductPage products={products} />}
-        />
-        <Route path="/fale-conosco" element={<FaleConosco />} />
-        <Route path="/onde-estamos" element={<OndeEstamos />} />
-        <Route path="*" element={<Missing />} />
-      </Routes>
+      <Nav user={user} setUser={setUser} />
+      <div className="content-wrap">
+        <Routes>
+          <Route path="/" element={<Home products={products} />} />
+          <Route path="/sobre" element={<Sobre />} />
+          <Route
+            path="/product/:id"
+            element={<ProductPage products={products} />}
+          />
+          <Route path="/fale-conosco" element={<FaleConosco />} />
+          <Route path="/onde-estamos" element={<OndeEstamos />} />
+          <Route path="/login" element={<Login setUser={setUser} />} />
+          <Route path="*" element={<Missing />} />
+        </Routes>
+      </div>
       <Footer />
     </div>
   );

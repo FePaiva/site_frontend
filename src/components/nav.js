@@ -3,15 +3,26 @@ import { Link } from "react-router-dom";
 import SendMessages from "./sendMessage";
 import "./nav.css";
 
-const Nav = () => {
+const Nav = ({ user, setUser }) => {
+  function handleLogoutClick() {
+    fetch("/logout", { method: "DELETE" }).then((r) => {
+      if (r.ok) {
+        setUser(null);
+      }
+    });
+  }
+
   return (
     <nav
       className="navbar navbar-expand-lg navbar-dark"
-      style={{ backgroundColor: "#333" }}
+      // style={{ backgroundColor: "#333", position: "fixed" }}
     >
       <div className="container-fluid ms-2">
-        <a className="navbar-brand" href="/">
-          Aço Ivaiporã
+        <a
+          className="navbar-brand"
+          style={{ cursor: "pointer", padding: "5px" }}
+        >
+          <SendMessages />
         </a>
         <button
           className="navbar-toggler"
@@ -63,7 +74,11 @@ const Nav = () => {
                   </a>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="logout">
+                  <a
+                    className="dropdown-item"
+                    href="logout"
+                    onClick={handleLogoutClick}
+                  >
                     Log Out
                   </a>
                 </li>

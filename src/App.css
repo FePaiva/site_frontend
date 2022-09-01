@@ -1,5 +1,17 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
+.content-wrap {
+  width: 100%;
+  flex: 1;
+  margin-top: 50px;
+}
 
+@media (max-width: 480px) {
+  .content-wrap {
+    margin-top: 60px;
+  }
+}

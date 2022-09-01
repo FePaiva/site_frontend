@@ -12,12 +12,8 @@
 /* Media query for mobile phone */
 @media (max-width: 480px) {
   .table td, th {
-    font-size: 5px;
+    font-size: 7px;
   }
 
-  .icon {
-    height: 10,;
-    width: 10 
-  }
 
 }

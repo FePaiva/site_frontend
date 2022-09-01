@@ -39,7 +39,6 @@ const Footer = () => {
           <tr>
             <td>Ivaipora, PR - Brasil</td>
             <td>
-              {" "}
               <a href="mailto:acoivaipora@hotmail.com">
                 acoivaipora@hotmail.com
               </a>
