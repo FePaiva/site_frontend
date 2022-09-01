@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import './product.css'
+import "./product.css";
 
 const Product = ({ product }) => {
   return (
@@ -21,18 +21,19 @@ const Product = ({ product }) => {
     //     </div>
     //   </div>
     // </div>
-
-    <div className="card h-100" style={{ width: "18rem" }}>
-      <img
-        src={product.image_url}
-        className="card-img-top"
-        alt={product.name}
-      />
-      <div className="card-body">
-        <h5 className="card-title">{product.name}</h5>
-        <Link to={`/product/${product.id}`}>
-          <button className="btn btn-primary">Saiba Mais</button>{" "}
-        </Link>
+    <div className="col p-3">
+      <div className="card h-100" style={{ width: "18rem" }}>
+        <img
+          src={product.image_url}
+          className="card-img-top"
+          alt={product.name}
+        />
+        <div className="card-body">
+          <h5 className="card-title">{product.name}</h5>
+          <Link to={`/product/${product.id}`}>
+            <button className="btn btn-primary">Saiba Mais</button>{" "}
+          </Link>
+        </div>
       </div>
     </div>
   );

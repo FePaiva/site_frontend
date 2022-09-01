@@ -1,0 +1,23 @@
+ .table {
+  background-color: #333;
+  color: white;
+  
+}
+
+.table td, th {
+  border: none;
+  padding: 0;
+}
+
+/* Media query for mobile phone */
+@media (max-width: 480px) {
+  .table td, th {
+    font-size: 5px;
+  }
+
+  .icon {
+    height: 10,;
+    width: 10 
+  }
+
+}

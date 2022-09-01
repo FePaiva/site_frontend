@@ -1,0 +1,12 @@
+@media (max-width: 480px) {
+  .col-md-4 {
+    width: 50%;
+    height: 50%;
+    margin-left: 100px;
+    padding-top: 15px;
+  }
+
+  .card-body {
+    padding-top: auto;
+  }
+}

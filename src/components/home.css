@@ -1,7 +1,7 @@
 .Home {
   width: 100%;
   flex-grow: 1;
-  padding: 3rem;
+  padding: 1rem;
   overflow-y: auto;
   background-color: #fff;
   display: grid;
@@ -9,8 +9,12 @@
 }
 
 @media (min-width: 600px) {
-  .Home { grid-template-columns: repeat(2, 1fr); }
+  .Home { 
+    grid-template-columns: repeat(2, 1fr); 
+  }
 }
 @media (min-width: 900px) {
-  .Home { grid-template-columns: repeat(4, 1fr); }
+  .Home { 
+    grid-template-columns: repeat(4, 1fr); 
+  }
 }
